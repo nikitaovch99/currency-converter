@@ -1,0 +1,19 @@
+<div class="container">
+  <app-error-global [error]="error" (closeError)="onErrorClose()" *ngIf="error"></app-error-global>
+  <div class="loader" *ngIf="loading">
+    <div class="spinner-border" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+  <div *ngIf="!loading">
+    <app-header
+      [rates]="rates"
+    >
+    </app-header>
+    <app-currency-convector
+    [currencies]="currencies"
+    [rates]="rates"
+    ></app-currency-convector>
+  </div>
+
+</div>

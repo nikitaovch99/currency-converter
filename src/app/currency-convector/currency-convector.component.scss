@@ -1,0 +1,28 @@
+.container-xl {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 1000px;
+}
+
+.form-select {
+  width: 190px;
+}
+.input{
+  width: 200px;
+  margin: 10px;
+}
+
+.currency-wrapper {
+  display: flex;
+  flex-direction: row;
+
+  &--left {
+    padding-right: 50px;
+  }
+
+  &--right {
+    padding-left: 50px;
+  }
+}
+

@@ -1,0 +1,36 @@
+<div class="container-xl">
+  <div class="currency-wrapper currency-wrapper--left">
+    <input
+      type="number"
+      id="amount"
+      class="form-control"
+      aria-label="Sizing example input"
+      aria-describedby="inputGroup-sizing-default"
+      placeholder="Enter a number"
+      [(ngModel)]="fromAmount"
+      (input)="convertAmount(fromAmount, 'fromAmount')"
+      >
+  <select class="form-select" aria-label="Default select example" [(ngModel)]="fromCurrency" (change)="changeCurrency()">
+    <option
+    *ngFor="let currency of currencies" [value]="currency">
+      {{currency}}
+    </option>
+  </select>
+</div>
+  <div class="currency-wrapper currency-wrapper--right">
+    <input
+      type="text" class="form-control"
+      aria-label="Sizing example input"
+      aria-describedby="inputGroup-sizing-default"
+      placeholder="Enter a number"
+      [(ngModel)]="toAmount"
+      (input)="convertAmount(toAmount, 'toAmount')"
+    >
+  <select class="form-select" aria-label="Default select example" [(ngModel)]="toCurrency" (change)="changeCurrency()">
+    <option
+    *ngFor="let currency of currencies" [value]="currency">
+      {{currency}}
+    </option>
+  </select>
+</div>
+</div>
