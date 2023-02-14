@@ -1,4 +1,9 @@
-.container {
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container--custom {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,3 +16,4 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+

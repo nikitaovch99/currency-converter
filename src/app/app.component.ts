@@ -13,12 +13,8 @@ export class AppComponent implements OnInit {
   loading = true;
   error = false;
   rates: Record<string, number>;
-  fromCurrency = 'UAH';
-  toCurrency = 'USD';
   currencies: string[] = [];
-  amount = 0;
-  convertedAmount = 0;
-  exchangeRate: number;
+
 
   async ngOnInit() {
     try {
